@@ -156,6 +156,9 @@ public class QSTileHolder {
             case QSConstants.TILE_LED:
                 resourceName = "ic_qs_led_on";
                 stringId = R.string.qs_tile_led;
+            case QSConstants.TILE_LIVE_DISPLAY:
+                resourceName ="ic_livedisplay_day";
+                stringId = R.string.live_display_title;
                 break;
             default:
                 return null;
