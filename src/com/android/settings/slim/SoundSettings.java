@@ -83,7 +83,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         mSwapVolumeButtons = (SwitchPreference) findPreference(KEY_SWAP_VOLUME_BUTTONS);
         mSwapVolumeButtons.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.SWAP_VOLUME_KEYS_ON_ROTATION, 1) != 0);
+                Settings.System.SWAP_VOLUME_KEYS_ON_ROTATION, 0) != 0);
         mSwapVolumeButtons.setOnPreferenceChangeListener(this);
     }
 
