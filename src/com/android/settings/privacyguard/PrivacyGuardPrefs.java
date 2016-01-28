@@ -21,6 +21,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.provider.Settings.Secure;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,8 +55,8 @@ public class PrivacyGuardPrefs extends SettingsPreferenceFragment implements
         mPrivacyGuardDefault = (SwitchPreference) findPreference(KEY_PRIVACY_GUARD_DEFAULT);
         mPrivacyGuardDefault.setOnPreferenceChangeListener(this);
 
-        mPrivacyGuardDefault.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.PRIVACY_GUARD_DEFAULT, 0) == 1);
+        mPrivacyGuardDefault.setChecked(Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.PRIVACY_GUARD_DEFAULT, 0) == 1);
     }
 
     @Override
@@ -74,8 +75,8 @@ public class PrivacyGuardPrefs extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mPrivacyGuardDefault) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.PRIVACY_GUARD_DEFAULT, value ? 1 : 0);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.PRIVACY_GUARD_DEFAULT, value ? 1 : 0);
             return true;
         }
         return false;

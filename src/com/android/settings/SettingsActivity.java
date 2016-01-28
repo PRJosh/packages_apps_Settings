@@ -280,7 +280,6 @@ public class SettingsActivity extends Activity
             R.id.nfc_payment_settings,
             R.id.home_settings,
             R.id.dashboard,
-            R.id.privacy_settings_candy
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -356,7 +355,6 @@ public class SettingsActivity extends Activity
             ProcessStatsSummary.class.getName(),
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
-            com.android.settings.candy.PrivacySettings.class.getName(),
     };
 
 
