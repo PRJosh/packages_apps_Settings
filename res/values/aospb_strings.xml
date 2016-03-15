@@ -39,4 +39,7 @@
     <string name="root_access_adb">ADB only</string>
     <string name="root_access_all">Apps and ADB</string>
 
+    <!-- Superuser derived from privacy guard -->
+    <string name="superuser_title">Superuser</string>
+
 </resources>
